@@ -1,4 +1,4 @@
-var list = ["a","b","c","d","e","f","g","h"];
+var list = ["Hello","Thank you","What's your name?","OK","Yes","No","Can you repeat that?","Great!"];
 low = 0;
 high = list.length;
 mid = low + (high-low)/2;
@@ -8,24 +8,23 @@ createPhraseList(list, low, mid, high);
 function detectArrowKey(event) { 
 
     key = event.keyCode;
-    var myElement = document.querySelector('#my-element');
     if(low == mid-1 && mid == high-1){  //when finally two phrases are left
         if (key == 37) 
         {   
-            $("#left-section").addClass("pressed");
+            $("#leftlist").addClass("pressed");
             setTimeout(function() {
                 alert("final: " + list[low]);
-                $("#left-section").removeClass("pressed");
+                $("#leftlist").removeClass("pressed");
                 resetParameters();
             }, 200);
             
         }
         if(key == 39)
         {
-            $("#right-section").addClass("pressed");
+            $("#rightlist").addClass("pressed");
             setTimeout(function() {
                 alert("final: " + list[mid]);
-                $("#right-section").removeClass("pressed");
+                $("#rightlist").removeClass("pressed");
                 resetParameters();
             }, 200);  
         }
@@ -43,27 +42,27 @@ function detectArrowKey(event) {
     
     if (key == 37) 
     {  //if user press left key
-        $("#left-section").addClass("pressed");
+        $("#leftlist").addClass("pressed");
         high = mid;
         mid = low + (high-low)/2;
         mid = Math.floor(mid);
         $(".phrase").remove();
         createPhraseList(list, low, mid, high);
         setTimeout(function() {
-            $("#left-section").removeClass("pressed");
+            $("#leftlist").removeClass("pressed");
         }, 200);
     }
 
     else if (key == 39)
     { //if user press right key
-        $("#right-section").addClass("pressed");
+        $("#rightlist").addClass("pressed");
         low = mid;
         mid = low + (high-low)/2;
         mid = Math.floor(mid);
         $(".phrase").remove();
         createPhraseList(list, low, mid, high);
         setTimeout(function() {
-            $("#right-section").removeClass("pressed");
+            $("#rightlist").removeClass("pressed");
         }, 200);
     }
 
@@ -79,30 +78,33 @@ function detectArrowKey(event) {
   }
 
 function createPhraseList(list, low, mid, high) {
-    var leftlist = document.getElementById("leftlist");
-    var rightlist = document.getElementById("rightlist");
+    var leftList = document.getElementById("leftlist");
+    var rightList = document.getElementById("rightlist");
 
     for( var j=low ; j<mid ; j++)
     {
-        var newLeftListItem = document.createElement("li"); //create a li element
+        var newLeftListItem = document.createElement("h2"); //create a h2 element
         newLeftListItem.classList.add("phrase");
         var leftListValue = document.createTextNode(list[j]); //create a text
-        newLeftListItem.appendChild(leftListValue) //add the text into the li element
-        leftlist.appendChild(newLeftListItem);        
+        newLeftListItem.appendChild(leftListValue); //add the text into the h2 element
+        leftList.append(newLeftListItem);
+        leftList.append(document.createElement("br")); //add the br tag after the h2 closing tag 
     }
 
     for( var j = mid ; j<high ; j++)
     {
-        var newRightListItem = document.createElement("li"); //create a li element
-        newRightListItem.classList.add("phrase"); // add class "phrase" to the li element
+        var newRightListItem = document.createElement("h2"); //create a h2 element
+        newRightListItem.classList.add("phrase"); 
         var rightListValue = document.createTextNode(list[j]); //create a text
-        newRightListItem.appendChild(rightListValue) //add the text into the li element
-        rightlist.appendChild(newRightListItem);
+        newRightListItem.appendChild(rightListValue); //add the text into the h2 element
+        rightList.append(newRightListItem);
+        rightList.append(document.createElement("br"));
     }
 }
 
 function resetParameters() { 
-    $(".phrase").remove();
+    $("#leftlist").empty()
+    $("#rightlist").empty()
     low = 0;
     high = list.length;
     mid = low + (high-low)/2;
