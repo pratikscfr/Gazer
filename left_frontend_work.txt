@@ -1,0 +1,23 @@
+1. Arrows-
+ -all arrows are present in png format under gazer-frontend/static/assets.
+ -there will be 3 arrows(left, right and up), just below the "snooze" box. the file name of these arrows are left-arrow.png, etc.
+ -when a box is selected, that respective arrow will be replaced by its selected version, ie, if left box is selected, left-arrow.png is replaced by left-arrow-selected.png. rest 2 arrows are not affected.
+ -(optional) when selected, they will have an anmiation of scale(1.05), and then back to normal size.
+
+2. Edit phrase-
+ -add a h3 "EDIT PHRASES" at the top right of webpage.
+ -when "EDIT PHRASES" is clicked, a cross appears on the right of every phrase and the 3 arrows below "snooze" div is replaced by a '+' icon.
+ - the '+' icon is present as global-add-button.png under gazer-frontend/static/assets.
+
+3. Footer section-
+ -currently, "How does this work?" in the footer is empty
+ -Pratik has taken the responsibility of what to display under that section.
+
+3. Responsive.
+ -This is not my thing at all. So, get creative and do something good.
+
+4. (very very optional)Animations
+ -When the website loads, all the elements on the page come down/up  (refer to tesla.com how the "Model S" text is animated)
+ -Whenever the phrases are listed, they get listed one-by-one.
+
+Any confusion, please contact @ScoobyDoo
