@@ -14,7 +14,7 @@ html{
 
 body{
   background: url('../static/backgrounds/background.png') no-repeat;
-  background-size: 1600px 900px;
+  background-size: 100vw 105vh;
   font-family: 'Montserrat', sans-serif !important;
 }
 
@@ -23,7 +23,6 @@ h2{
 }
 
 div.main{
-    top: 0;
     height: 100vh;
 }
 
@@ -39,6 +38,28 @@ div.container.brand{
     text-align: center;
 }
 
+.brand h1 a{
+    color:#1D1D1D;
+    opacity: 1;
+}
+
+.brand h1 a:hover{
+    text-decoration: none;
+}
+
+.brand h5{
+    text-align: right;
+    display: inline;
+    float: right;
+}
+.brand h5 a{
+    text-align: center;
+    font: normal normal bold 25px/30px Montserrat;
+    letter-spacing: 2.15px;
+    color: #1D1D1D;
+    opacity: 1;
+}
+
 div.active-section{
     padding: 0;
 }
@@ -47,9 +68,15 @@ div.row{
     flex-wrap: nowrap;
     width: 100%;
     margin: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-div.col-sm{
+div.col-md{
+    margin-top: 85px;
+}
+
+div.col-md-4{
     max-width: 450px ;
     padding: 0;
     border-radius: 30px;
@@ -57,6 +84,15 @@ div.col-sm{
     background: linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(48px);
+}
+
+div.col-edit{
+    max-width: 450px ;
+    padding: 0;
+    border-radius: 30px;
+    opacity: 1;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
 }
 
 div.left, div.right, div.snooze{
@@ -74,6 +110,31 @@ div.snooze{
     margin-left: 20px;
     margin-right: 20px;
     position: relative;
+}
+
+.arrows{
+    width: 100%;
+    position: absolute;
+    top: 30vh;
+}
+
+.arrow{
+    width: 120px;
+}
+
+.up-arrow{
+    display: block;
+    margin: auto;
+} 
+
+.left-arrow{
+    float:left;
+    margin-left: 40px;
+}
+
+.right-arrow{
+    float:right;
+    margin-right: 40px;
 }
 
 div.left h2, div.right h2{
@@ -100,7 +161,6 @@ div.left h2, div.right h2{
 
 h1.snooze-text{
     width: fit-content;
-    /* font-size: 40px; */
     letter-spacing: 4px;
     font-weight: 700;
 }
@@ -116,16 +176,7 @@ div.pressed {
 div.foot{
     background-color: #1d1d1d;
     color: #ffffff;
-    height: 400px;
-}
-
-div.row{
-    margin-left: auto;
-    margin-right: auto;
-}
-
-div.col-md{
-    margin-top: 85px;
+    height: 350px;
 }
 
 .col-md.instructions{
@@ -156,7 +207,7 @@ i:first-child{
 }
 
 .sellmovica{
-    margin-top: 50px;
+    margin-top: 30px;
     color: #ffffff;
     text-align: center;
 }

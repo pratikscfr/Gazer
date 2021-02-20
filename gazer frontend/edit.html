@@ -14,37 +14,46 @@
 
     <title>Gazer</title>
   </head>
-  <body onload="onloadmain()" onkeydown="detectArrowKey(event)" onclick="detectArrowKey(event)">
+  <body onload="edit()">
     <div class="main">
 
       <div class="container brand">
-        <h1>Gazer</h1>
-        <h5><a href="./edit.html">Edit phrases</a></h5>
+        <h1><a href="./index.html">Gazer</a></h1>
+        <h5><a class="add" data-toggle="modal" data-target="#exampleModal">Add Phrase</a></h5>
+        <h5><a class="add" onclick="deleteit()">Delete Phrase</a>&emsp;</h5>
       </div>
-
       <div class="container active-section">
 
         <div class="row">
-
           <div class="col-md-4 left" id="leftlist">
             <!-- text comes from javascript -->
           </div>
 
-          <div class="col-md-4 snooze" id="snooze-section">
-            <h1 class="snooze-text">Snooze</h1>
+          <div class="col-md col-edit snooze" id="snooze-section">
+          </div>
 
-            <div class="row">
-              <div class="arrows">
-                <img src="static/assets/up-arrow.png" alt="up-arrow" class="arrow up-arrow">
-                <div>
-                  <img src="static/assets/left-arrow.png" alt="left-arrow" class="arrow left-arrow">
-                  <img src="static/assets/right-arrow.png" alt="right-arrow" class="arrow right-arrow">
-                  <div style="clear: both;"></div>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Enter Text</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <input type="text" id="myText">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="submit" id="submitbtn" class="btn btn-primary" onclick="add_element()">Save changes</button>
                 </div>
               </div>
             </div>
-
           </div>
+
+
 
           <div class="col-md-4 right" id="rightlist">
             <!-- text comes from javascript -->
