@@ -10,7 +10,7 @@ const API_BASE_URL = 'http://localhost:9000/api';
 
 function EditPage() {
   const [phrases, setPhrases] = useState([]);
-  const [currentPhrases, setCurrentPhrases] = useState([]);
+  const [currentPhrases, setCurrentPhrases] = useState({ left: [], right: [] });
   const [low, setLow] = useState(0);
   const [high, setHigh] = useState(0);
   const [mid, setMid] = useState(0);
@@ -100,11 +100,13 @@ function EditPage() {
   const handleKeyPress = (event) => {
     const key = event.keyCode;
     
+    if (phrases.length === 0) return;
+    
     if (low === mid - 1 && mid === high - 1) {
       // Final selection - only two phrases left
-      if (key === 37) { // Left arrow
+      if (key === 37 && phrases[low]) { // Left arrow
         handlePhraseSelect(phrases[low].id);
-      } else if (key === 39) { // Right arrow
+      } else if (key === 39 && phrases[mid]) { // Right arrow
         handlePhraseSelect(phrases[mid].id);
       } else if (key === 38) { // Up arrow - refresh
         initializePhraseSelection();
@@ -168,7 +170,7 @@ function EditPage() {
       <div className="container active-section">
         <div className="row">
           <div className="col-md-4 left" id="leftlist">
-            {currentPhrases.left.map((phrase) => (
+            {currentPhrases.left && currentPhrases.left.map((phrase) => (
               <div key={phrase.id} className="phrase-container">
                 <h2 className="phrase">
                   {phrase.text}
@@ -198,7 +200,7 @@ function EditPage() {
           </div>
 
           <div className="col-md-4 right" id="rightlist">
-            {currentPhrases.right.map((phrase) => (
+            {currentPhrases.right && currentPhrases.right.map((phrase) => (
               <div key={phrase.id} className="phrase-container">
                 <h2 className="phrase">
                   {phrase.text}
