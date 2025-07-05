@@ -4,7 +4,7 @@
 
 @font-face{
     font-family: The Artisan;
-    src: url('/static/fonts/the-artisan.otf');
+    src: url('../assets/fonts/the-artisan.otf');
 }
 
 /* Button styles */
