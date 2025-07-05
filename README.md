@@ -5,7 +5,8 @@ A web-based communication application inspired by Google's [Look to Speak](https
 ## Project Structure
 
 - **Backend**: Flask API server (`gazer_backend/`)
-- **Frontend**: React application (to be refactored from current HTML/JS)
+- **Frontend**: React application (`gazer_frontend/`)
+- **Legacy Frontend**: Original HTML/JS implementation (`gazer frontend/`)
 
 ## Features
 
@@ -42,7 +43,22 @@ The backend will be available at `http://localhost:9000`
 
 ### Frontend Setup
 
-*Coming soon - React refactor in progress*
+1. Navigate to the frontend directory:
+   ```bash
+   cd gazer_frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+The React application will open at `http://localhost:3000`
 
 ## API Documentation
 

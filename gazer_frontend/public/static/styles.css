@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+
+/* had to do this because 'The Artisan' was not available on Google Fonts */
+@font-face{
+    font-family: The Artisan;
+    src: url('../static/fonts/the artisan.otf');
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+  background: url('../static/backgrounds/background.png') no-repeat;
+  background-size: 100vw 105vh;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+h2{
+    font-size: 20px !important;
+}
+
+div.main{
+    height: 100vh;
+}
+
+div.container.brand{
+    text-align: center;
+    margin: 20px auto 40px auto;
+}
+
+.brand h1{
+    font-family: The Artisan,cursive;
+    font-weight: 750;
+    font-size: 75px;
+    text-align: center;
+}
+
+.brand h1 a{
+    color:#1D1D1D;
+    opacity: 1;
+}
+
+.brand h1 a:hover{
+    text-decoration: none;
+}
+
+.brand h5{
+    text-align: right;
+    display: inline;
+    float: right;
+}
+.brand h5 a{
+    text-align: center;
+    font: normal normal bold 25px/30px Montserrat;
+    letter-spacing: 2.15px;
+    color: #1D1D1D;
+    opacity: 1;
+}
+
+div.active-section{
+    padding: 0;
+}
+
+div.row{
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.col-md{
+    margin-top: 85px;
+}
+
+div.col-md-4{
+    max-width: 450px ;
+    padding: 0;
+    border-radius: 30px;
+    opacity: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(48px);
+}
+
+div.col-edit{
+    max-width: 450px ;
+    padding: 0;
+    border-radius: 30px;
+    opacity: 1;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+}
+
+div.left, div.right, div.snooze{
+    transition: all 0.2s ease-in-out;
+}
+
+div.left, div.right{
+    height: 70vh;
+    text-align: center;
+    padding-top: 20px;
+}
+
+div.snooze{
+    height: 27vh;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.arrows{
+    width: 100%;
+    position: absolute;
+    top: 30vh;
+}
+
+.arrow{
+    width: 120px;
+}
+
+.up-arrow{
+    display: block;
+    margin: auto;
+} 
+
+.left-arrow{
+    float:left;
+    margin-left: 40px;
+}
+
+.right-arrow{
+    float:right;
+    margin-right: 40px;
+}
+
+div.left h2, div.right h2{
+    color: #1d1d1d;
+    display: inline-block;
+    background-color: #e6e6e6;
+    box-shadow: 0px 6px 10px #0000004D;
+    border-radius: 33px;
+    padding: 10px;
+    min-width: 150px;
+    max-width: 385px;
+    margin: 10px auto 10px auto;
+    white-space: pre;
+}
+
+.snooze-text{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+h1.snooze-text{
+    width: fit-content;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+div.pressed {
+    transform: scale(1.05);
+    opacity: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+div.foot{
+    background-color: #1d1d1d;
+    color: #ffffff;
+    height: 350px;
+}
+
+.col-md.instructions{
+    margin-left: 64.6px;
+}
+
+div.col-md.names{
+    margin-right: 64.6px;
+    text-align: right;
+}
+
+.names p{
+    margin-right: 10px;
+}
+
+i{
+    margin-right: 10px;
+}
+
+i:first-child{
+    margin-left: 20px;
+}
+
+.names a{
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+}
+
+.sellmovica{
+    margin-top: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+@media (max-width: 1920px) {
+    div.active-section{
+        max-width: 1390px;
+    }
+}
+
+@media (max-width: 160px) {
+    div.foot{
+        height: 720px;
+    }
+}
