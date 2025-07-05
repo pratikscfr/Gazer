@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './MainPage.css';
+import upArrow from '../assets/images/up-arrow.png';
+import leftArrow from '../assets/images/left-arrow.png';
+import rightArrow from '../assets/images/right-arrow.png';
 
 const API_BASE_URL = 'http://localhost:9000/api';
 
@@ -140,10 +143,10 @@ function MainPage() {
             <h1 className="snooze-text">Snooze</h1>
             <div className="row">
               <div className="arrows">
-                <img src="/static/assets/up-arrow.png" alt="up-arrow" className="arrow up-arrow" />
+                <img src={upArrow} alt="up-arrow" className="arrow up-arrow" />
                 <div>
-                  <img src="/static/assets/left-arrow.png" alt="left-arrow" className="arrow left-arrow" />
-                  <img src="/static/assets/right-arrow.png" alt="right-arrow" className="arrow right-arrow" />
+                  <img src={leftArrow} alt="left-arrow" className="arrow left-arrow" />
+                  <img src={rightArrow} alt="right-arrow" className="arrow right-arrow" />
                   <div style={{ clear: 'both' }}></div>
                 </div>
               </div>
