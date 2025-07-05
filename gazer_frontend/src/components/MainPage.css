@@ -4,7 +4,7 @@
 /* had to do this because 'The Artisan' was not available on Google Fonts */
 @font-face{
     font-family: The Artisan;
-    src: url('/static/fonts/the artisan.otf');
+    src: url('/static/fonts/the-artisan.otf');
 }
 
 html{
